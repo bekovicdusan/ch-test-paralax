@@ -8,11 +8,14 @@ const User = (props) => {
 
   const delayRender = () => {
     const id = props.user.id;
-    let delay = undefined;
+    const remainder = (id / 3) % 1;
+    let delay;
 
-    if (id === 1 || id === 4 || id === 7) delay = 0;
-    if (id === 2 || id === 5 || id === 8) delay = 250;
-    if (id === 3 || id === 6 || id === 9) delay = 500;
+    //checks for first, second and third element in groups of three in order to assign a different delay to each one and 
+    //render the user component one by one thereafter
+    if (remainder > 0 && remainder < 0.4) delay = 0;
+    if (remainder > 0.4 && remainder < 0.7) delay = 250;
+    if (remainder === 0) delay = 500;
 
     setTimeout(() => {
       setShouldShow(true)

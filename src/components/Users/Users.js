@@ -4,10 +4,10 @@ import classes from './users.module.css';
 
 const Users = (props) => {
   const users = props.users;
-  const groupOne = users.filter(user => user.id < 4)
-  const groupTwo = users.filter(user => user.id > 3 && user.id < 7)
-  const groupThree = users.filter(user => user.id > 6 && user.id < 10)
   
+  const startSlice = (props.showRow - 1) * 3;
+  const endSlice = startSlice + 3;
+  const displayRow = users.slice(0, endSlice);
 
   return (
     <>
@@ -16,13 +16,7 @@ const Users = (props) => {
         <hr/>
       </div>
       <div className={classes['users-wrapper']}>
-        {props.showFirstRow && groupOne.map(user => (
-          <User user={user} key={user.id} />
-        ))}
-        {props.showSecondRow && groupTwo.map(user => (
-          <User user={user} key={user.id} />
-        ))}
-        {props.showThirdRow && groupThree.map(user => (
+        {props.showRow > 0 && displayRow.map(user => (
           <User user={user} key={user.id} />
         ))}
       </div>

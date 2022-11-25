@@ -1,0 +1,12 @@
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40vh;
+}
+
+.content {
+  color: white;
+  text-shadow: 2px 2px #3b3b3b;
+  font-size: 46px;
+}

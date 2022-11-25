@@ -1,0 +1,45 @@
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-wrapper h1 {
+  color: white;
+  text-shadow: 2px 2px #3f3f3f;
+  margin-top: 40vh;
+  font-size: 46px;
+}
+
+.background {
+  background: url('./assets/bg.webp');
+  background-position: center;
+  background-size: cover;
+  top: 0;
+  position: absolute;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+}
+
+.tree {
+  background: url('./assets/tree.png'); 
+  background-size: contain;
+  background-position: -20px 40px;
+  background-repeat: repeat no-repeat;
+  position: absolute;
+  width: 100vw;
+  height: 43vh;
+  bottom: -30px;
+  left: 0;
+  z-index: -1;
+}
+
+.fixed-background {
+  background-color: #4e4e4e;
+  margin-top: 45vh;
+  width: calc(100vw - 60px);
+  min-height: calc(100vh - 60px);
+  padding: 30px;
+}

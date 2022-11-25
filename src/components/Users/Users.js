@@ -7,6 +7,8 @@ const Users = (props) => {
   
   const startSlice = (props.showRow - 1) * 3;
   const endSlice = startSlice + 3;
+
+  //used for selectively allowing individual users to be rendered in groups of three
   const displayRow = users.slice(0, endSlice);
 
   return (

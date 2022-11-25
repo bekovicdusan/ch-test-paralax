@@ -4,6 +4,7 @@ import Card from '../UI/Card';
 import classes from './user.module.css';
 
 const User = (props) => {
+  //used for conditionally adding the 'show' class to which animation is attached in user.module.css
   const [shouldShow, setShouldShow] = useState(false);
 
   const delayRender = () => {
@@ -11,7 +12,7 @@ const User = (props) => {
     const remainder = (id / 3) % 1;
     let delay;
 
-    //checks for first, second and third element in groups of three in order to assign a different delay to each one and 
+    //check for recognizing the first, second and third element in groups of three in order to assign a different delay to each one and 
     //render the user component one by one thereafter
     if (remainder > 0 && remainder < 0.4) delay = 0;
     if (remainder > 0.4 && remainder < 0.7) delay = 250;
